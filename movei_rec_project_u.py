@@ -236,6 +236,15 @@ elif a7 == "D" :
 
 type1 = merge_ans[7]
 
+def get_key(dic,value):
+    dictitem=dic.items()
+    try:
+        for KEY,VALUE in dictitem:
+            if VALUE==value:
+                return(KEY)
+    except:
+        return("value not in the dictionary")
+
 movie_tag0=[冒險,科幻,奇幻,劇情,犯罪,恐怖,懸疑驚悚,喜劇,愛情,溫馨家庭,動畫,戰爭,音樂歌舞,歷史傳記,紀錄片,勵志,武俠,影展]
 dict1={"冒險":冒險,"科幻":科幻,"奇幻":奇幻,"劇情":劇情,"犯罪":犯罪,"恐怖":恐怖,"懸疑驚悚":懸疑驚悚,
        "喜劇":喜劇,"愛情":愛情,"溫馨家庭":溫馨家庭,"動畫":動畫,"戰爭":戰爭,
