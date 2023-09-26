@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>My Articles</h1>
+<h2>User: {{ current_user.username }}</h2>
+<a href="{{ url_for('article') }}" id="article">Write article</a> <br>
+<ul>
+    {% for article in articles[::-1] %}
+        <li>
+            <h3><a href="{{ url_for('each_article', username=current_user.username, a_title=article.a_title) }}">{{ article.a_title }}</a></h3>
+            <!-- <p>{{ article.contents | safe }}</p> -->
+            <p>{% if article.contents|length > 50 %}{{ article.contents[:50] | safe }}...{% else %}{{ article.contents | safe }}{% endif %}</p>
+            <hr>
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}

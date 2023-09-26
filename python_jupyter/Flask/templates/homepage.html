@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Homepage</h1>
+<div>
+<p>Welcome! </p>
+    <a href="{{ url_for('article') }}" id="article">Write Article</a> <br>
+    <form method="POST" action="/search_user">
+        <label for="user_input">搜尋用戶：</label>
+        <input type="text" id="user_input" name="user_input" required>
+        <button type="submit">搜尋</button>
+    </form>
+    
+    <form method="POST" action="{{ url_for('search_articles') }}">
+        <label for="user_input">搜尋文章：</label>
+        <input type="text" name="search_keyword" placeholder="輸入文章標題關鍵字">
+        <button type="submit">搜尋</button>
+</div>
+<ul>
+    <h3>NEW ARTICLES</h3>
+    {% for article in new_articles %}
+        <li>
+            <h3><a href="{{ url_for('each_article', username=article.author, a_title=article.a_title) }}">{{ article.a_title }}</a></h3>
+            <p>author: {{ article.author }}</p>
+            <p>{% if article.contents|length > 50 %}{{ article.contents[:50] | safe }}...{% else %}{{ article.contents | safe }}{% endif %}</p>
+            <hr>
+        </li>
+    {% endfor %}
+</ul>
+
+{% endblock %}

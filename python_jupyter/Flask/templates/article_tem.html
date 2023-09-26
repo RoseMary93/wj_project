@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block head %}
+<script src="{{ url_for('static', filename='js/delete.js') }}"></script>
+{% endblock %}
+
+{% block content %}
+<h2>{{ article.a_title }}</h2>
+<h3>Author: {{ author }}</h3>
+<!-- <p>{{ article.contents | safe }}</p> -->
+<!-- <p>{{ html_contents|safe }}</p> -->
+<pre>{{ html_contents|safe }}</pre>
+
+<!-- {% if author == current_user.username %}
+    <a href="{{ url_for('edit_articles', username=current_user.username, a_title=article.a_title) }}" id="edit-link">EDIT</a><br>
+{% endif %} -->
+<form id="no_setting_form" action="{{ url_for('edit_articles', username=current_user.username, a_title=article.a_title) }}" method="POST">
+    <button type="submit" class="edit_button">EDIT</button>
+</form>
+<form id="no_setting_form" action="{{ url_for('delete_article', article_id=article.id) }}" method="POST">
+    <button type="submit" class="delete_button">DELETE</button>
+</form>
+
+{% endblock %}
