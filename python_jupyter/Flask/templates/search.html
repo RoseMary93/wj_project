@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<form method="POST" action="/search_user">
+    <label for="user_input">搜尋用戶：</label>
+    <input type="text" id="user_input" name="user_input" required>
+    <button type="submit">搜尋</button>
+</form>
+
+<form method="POST" action="{{ url_for('search_articles') }}">
+    <label for="user_input">搜尋文章：</label>
+    <input type="text" name="search_keyword" placeholder="輸入文章標題關鍵字">
+    <button type="submit">搜尋</button>
+{% endblock %}

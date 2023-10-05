@@ -1,0 +1,99 @@
+nav {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+    background-color: #ddf3f1;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: "Cambria", "Times New Roman", "Arial", sans-serif;
+    background-color: #f5f5f5;
+    margin: 20px;
+    padding: 20px;
+}
+
+form {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center; /* 將整個容器內容置中 */
+}
+
+.form-group {
+    margin: 20px;
+    padding: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* 將內邊距和邊框計算在內容寬度內 */
+    text-align: left; /* 文字向左對齊 */
+}
+
+.form-group input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.form-group textarea {
+    display: block;
+    margin-bottom: 5px;
+    height: 300px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* 將內邊距和邊框計算在內容寬度內 */
+    text-align: left; /* 文字向左對齊 */
+}
+
+.errors {
+    color: red; /* 設置文字顏色為紅色 */
+    font-size: 14px; /* 設置文字大小為14像素 */
+    /* 其他樣式屬性，如字體、背景色等，也可以根據需要添加 */
+}
+
+pre {
+    font-family: "Cambria", "Times New Roman", "Arial", sans-serif;
+    font-size: 16px; /* 自訂字體大小 */
+    line-height: 1.2; /* 自訂行高 */
+    border: 1px solid #ccc; /* 自訂邊框 */
+    padding: 10px; /* 自訂內邊距 */
+    white-space: pre-wrap; /* 保留換行，自動換行 */
+}
+
+#no_setting_form {
+    border: none; /* 移除邊框 */
+    margin: 0;
+    margin-top: 5px; /* 移除 margin */
+    padding: 0; /* 移除 padding */
+}
+
+#no_setting_form .delete_button {
+    background-color: #ee9b90;
+    font-family: "Cambria", "Times New Roman", "Arial", sans-serif;
+}
+
+#no_setting_form .edit_button {
+    background-color: #90c5ee;
+    font-family: "Cambria", "Times New Roman", "Arial", sans-serif;
+}
