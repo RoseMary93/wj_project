@@ -31,7 +31,7 @@ class QuizApp:
         print("\n 測驗結束。")
 
 def main():
-    csv_file = "N3words.csv"
+    csv_file = "JP_test_2_words.csv"
     app = QuizApp(csv_file)
     app.run()
 
